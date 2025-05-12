@@ -13,7 +13,7 @@ HYGMA introduces a novel approach that combines hypergraph convolution networks 
 
 Our method:
 1. Dynamically clusters agents into groups based on state history using spectral clustering
-2. Builds hypergraph structures to model intra-group and inter-group relationships
+2. Builds hypergraph structures to model intra-group relationships
 3. Leverages hypergraph convolution networks to extract group-aware features
 4. Integrates with value-decomposition methods (QMIX) and actor-critic frameworks
 
