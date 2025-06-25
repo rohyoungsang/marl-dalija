@@ -1,6 +1,6 @@
 # HYGMA: Hypergraph Coordination Networks with Dynamic Grouping for Multi-Agent Reinforcement Learning
 
-This is an official implementation of ICML 25 paper ["HYGMA: Hypergraph Coordination Networks with Dynamic Grouping for Multi-Agent Reinforcement Learning"](https://icml.cc/virtual/2025/poster/44143).
+This is an official implementation of ICML 25 paper ["HYGMA: Hypergraph Coordination Networks with Dynamic Grouping for Multi-Agent Reinforcement Learning"](https://openreview.net/pdf?id=mgJkeqc685).
 
 ## Introduction
 
