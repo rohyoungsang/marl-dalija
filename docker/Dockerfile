@@ -61,22 +61,22 @@ RUN pip3 install git+https://github.com/oxwhirl/smac.git
 ENV SC2PATH=/pymarl/3rdparty/StarCraftII
 
 # StarCraft II 본체 설치
-RUN mkdir -p /pymarl/3rdparty && \
-    cd /pymarl/3rdparty && \
-    if [ ! -d StarCraftII ]; then \
-        wget https://blzdistsc2-a.akamaihd.net/Linux/SC2.4.10.zip && \
-        unzip -P iagreetotheeula SC2.4.10.zip && \
-        rm SC2.4.10.zip; \
-    else \
-        echo "StarCraftII already exists. Skipping download."; \
-    fi
+#RUN mkdir -p /pymarl/3rdparty && \
+#    cd /pymarl/3rdparty && \
+#    if [ ! -d StarCraftII ]; then \
+#        wget https://blzdistsc2-a.akamaihd.net/Linux/SC2.4.10.zip && \
+#        unzip -P iagreetotheeula SC2.4.10.zip && \
+#        rm SC2.4.10.zip; \
+#    else \
+#        echo "StarCraftII already exists. Skipping download."; \
+#    fi
 
 # SMAC 맵 설치 (기존 맵 보존)
-RUN mkdir -p /pymarl/3rdparty/StarCraftII/Maps && \
-    cd /tmp && \
-    wget https://github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip && \
-    unzip SMAC_Maps.zip && \
-    cp -rn SMAC_Maps/* /pymarl/3rdparty/StarCraftII/Maps/ && \
-    rm -rf SMAC_Maps SMAC_Maps.zip
+#RUN mkdir -p /pymarl/3rdparty/StarCraftII/Maps && \
+#    cd /tmp && \
+#    wget https://github.com/oxwhirl/smac/releases/download/v0.1-beta1/SMAC_Maps.zip && \
+#    unzip SMAC_Maps.zip && \
+#    cp -rn SMAC_Maps/* /pymarl/3rdparty/StarCraftII/Maps/ && \
+#    rm -rf SMAC_Maps SMAC_Maps.zip
 
 WORKDIR /pymarl
