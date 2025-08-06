@@ -17,6 +17,7 @@ Link: [https://openreview.net/pdf?id=mgJkeqc685](https://openreview.net/pdf?id=m
 After downloading the code, please follow these steps:
 
 1. **Install the StarCraft II simulator**
+   Navigate to the root folder( `/marl-dalija`) and run:
    ```bash
    ./install_sc2.sh
    ```
@@ -27,15 +28,44 @@ After downloading the code, please follow these steps:
    docker build --network=host --no-cache -t pymarl:1.0 .
    ```
 
-3. **Run the Docker container**
+3. **Launch the Docker container**
+   Navigate to the root folder( `/marl-dalija`) and run:
    ```bash
    ./run.sh 0
    ```
 
-4. **Start training (inside the Docker container)**
+4. **Enter the container's bash shell**  
+   After step 3, exit the container if it doesn't automatically enter bash, and run:
+    ```bash
+    ./run.sh 0
+    ```
+   This will start the container in bash mode.
+
+5. **Start training (inside the Docker container)**
    ```bash
    python3 src/main.py --config=hygma --env-config=sc2 with env_args.map_name=3s_vs_5z
    ```
+
+---
+
+## 🔐 Cloning this private repository
+
+If you are a collaborator and the repository is private, please use SSH:
+
+```bash
+git clone git@github.com:rohyoungsang/marl-dalija.git
+```
+
+Make sure you have added your SSH key to your GitHub account.  
+See [GitHub Docs](https://docs.github.com/en/authentication/connecting-to-github-with-ssh) for instructions.
+
+If you must use HTTPS and are prompted for authentication, generate and use a **personal access token (PAT)** instead of your password:  
+[Create a GitHub PAT](https://github.com/settings/tokens)
+
+```bash
+git clone https://github.com/rohyoungsang/marl-dalija.git
+```
+When prompted, use your GitHub **username** and the **token** as your password.
 
 ---
 
