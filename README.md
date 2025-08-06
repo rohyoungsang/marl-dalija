@@ -16,7 +16,7 @@ Link: [https://openreview.net/pdf?id=mgJkeqc685](https://openreview.net/pdf?id=m
 
 After downloading the code, please follow these steps:
 
-1. **Install the StarCraft II simulator**
+1. **Install the StarCraft II simulator**  
    Navigate to the root folder( `/marl-dalija`) and run:
    ```bash
    ./install_sc2.sh
@@ -28,7 +28,7 @@ After downloading the code, please follow these steps:
    docker build --network=host --no-cache -t pymarl:1.0 .
    ```
 
-3. **Launch the Docker container**
+3. **Launch the Docker container**  
    Navigate to the root folder( `/marl-dalija`) and run:
    ```bash
    ./run.sh 0
@@ -41,7 +41,7 @@ After downloading the code, please follow these steps:
     ```
    This will start the container in bash mode.
 
-5. **Start training (inside the Docker container)**
+5. **Start training (inside the Docker container)**   
    ```bash
    python3 src/main.py --config=hygma --env-config=sc2 with env_args.map_name=3s_vs_5z
    ```
